@@ -18,8 +18,18 @@ function toggle() {
   }
 }
 
-function fillValue() {
-  // document.getElementsByClassName("box").value="X";
-  // console.log(this);
-  this.value="X";
+function fillValue(box) {
+  if (!box.value) {
+    let turn = whoseTurn();
+    let boxRef = box.id;
+    document.getElementById(boxRef).value=turn;
+    toggle();
+  }
+}
+
+function whoseTurn() {
+  let turn = document.getElementsByClassName('active')[0];
+  let classes = turn.classList;
+  console.log(classes);
+  return (classes[1] == "X") ? "X" : "O" ;
 }
