@@ -9,14 +9,30 @@
 </head>
 <body>
 
-<!-- <div class="loader-container">
+<!-- <div class="loader-container" id="loader-and-all">
     <img src="images/tic_tac_toe_loader_.gif" class="loader" id="loader"></img> 
-    <button class="primary-btn" id="start">Start Game</button>
+    <button class="primary-btn" id="start" onclick="startGame()">Start Game</button>
 </div> -->
 
-<div class="turn-status">
-    <div class="Xturn ">X turn</div>
-    <div class="Oturn active">O turn</div>
+<div id="game" class="game">
+    <div class="turn-status">
+        <div class="turn" onclick="toggle()">X turn</div>
+        <div class="turn active" onclick="toggle()">O turn</div>
+    </div>
+
+    <div class="grid-container">
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+        <input class="box" id="box" readonly onclick="fillValue()"></input>
+    </div>
 </div>
 
 <script src="script.js"></script>

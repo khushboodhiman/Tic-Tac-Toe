@@ -36,30 +36,56 @@ body {
     transition: ease 1s;
 }
 
-.turn-status {
-    background-color: #fff;
-    display: flex;
-    max-width: 450px;
-    width: 100%;
+.game {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    min-width: 210px;
+    max-width: 450px;
+    width: 100%;
+    /* display: none; */
+}
+
+.turn-status {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
     height: 10vh;
     border-radius: 8px;
     justify-content: space-around;
 }
 
-.Xturn, .Oturn {
+.turn {
     font-weight: 500;
     width: 100%;
     margin: 4px;
     border-radius: 8px;
     text-align: center;
     line-height: 60px;
+    transition: all ease .2s;
 }
 
 .turn-status .active {
     background-color: #FF4C4C;
     color: #fff;
+}
+
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(70px, 150px));
+    grid-template-rows: repeat(3, minmax(70px, 150px));
+    margin-top: 24px;
+    border-radius: 8px;
+    grid-gap: 8px;
+}
+
+.box {
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    object-fit: cover;
+    font-size: 80px;
+    text-align: center;
 }
