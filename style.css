@@ -54,6 +54,8 @@ body {
     height: 10vh;
     border-radius: 8px;
     justify-content: space-around;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .turn {
@@ -88,4 +90,5 @@ body {
     object-fit: cover;
     font-size: 80px;
     text-align: center;
+    cursor: pointer;
 }
