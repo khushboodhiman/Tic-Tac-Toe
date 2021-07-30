@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- <div class="loader-container" id="loader-and-all">
+<div class="loader-container">
     <img src="images/tic_tac_toe_loader_.gif" class="loader" id="loader"></img> 
-    <button class="primary-btn" id="start" onclick="startGame()">Start Game</button>
-</div> -->
+</div>
 
-<div id="game" class="game">
+<div class="game">
     <div class="turn-status">
         <div class="turn X active">X turn</div>
         <div class="turn O">O turn</div>
     </div>
 
-    <div class="grid-container">
+    <div class="grid-container" id="grid-container">
         <input class="box" id="0" readonly onclick="fillValue(this)"></input>
         <input class="box" id="1" readonly onclick="fillValue(this)"></input>
         <input class="box" id="2" readonly onclick="fillValue(this)"></input>
@@ -33,6 +35,12 @@
         <input class="box" id="7" readonly onclick="fillValue(this)"></input>
         <input class="box" id="8" readonly onclick="fillValue(this)"></input>
     </div>
+</div>
+
+<div class="display-msg">
+    <h1 class="winner"></h1>
+    <h1 class="message"></h1>
+    <button class="primary-btn play-again" onclick="restart()">Play Again</button>
 </div>
 
 <script src="script.js"></script>
